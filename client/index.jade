@@ -2,10 +2,52 @@ doctype html
 html(lang='en')
   head
     meta(charset='utf-8')
-    title Prototype
+    title Weather Forecast
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css')
     link(rel='stylesheet', href='/style.css')
   body
-    h1 Forecast
-    
+    h1 Forecasting App
+    .container
+      .row#citytext Fremont
+      .row#currdate Thu, February 12
+      .row#currtemp 51 F
+      .row#feels
+        .col-xs-3#realfeel Real Feel 56 deg
+        .col-xs-3#probofrain  Probability of Rain 4%
+        .col-xs-3#uv UV Low
+        .col-xs-3#sunsettime Sunset 5:44pm      
+      .row#forecasts        
+        .row.days
+          .col-md-2 
+            .row.info#day1.day thurs
+            .row.info#d1icon.iconimg sunny
+            .row.info#high1.high 71
+            .low.info#low1.low  47    
+          .col-md-2
+            .row.info#day1.day thurs
+            .row.info#d1icon.iconimg sunny
+            .row.info#high1.high 71
+            .low.info#low1.low  47
+          .col-md-2
+            .row.info#day1.day thurs
+            .row.info#d1icon.iconimg sunny
+            .row.info#high1.high 71
+            .low.info#low1.low  47
+          .col-md-2
+            .row.info#day1.day thurs
+            .row.info#d1icon.iconimg sunny
+            .row.info#high1.high 71
+            .low.info#low1.low  47
+          .col-md-2
+            .row.info#day1.day thurs
+            .row.info#d1icon.iconimg sunny
+            .row.info#high1.high 71
+            .low.info#low1.low  47
+          .col-md-2
+            .row.info#day1.day thurs
+            .row.info#d1icon.iconimg sunny
+            .row.info#high1.high 71
+            .low.info#low1.low  47    
+          
     script(src='/vendor/jquery/dist/jquery.js')
     script(src='/main.js')

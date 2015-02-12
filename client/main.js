@@ -1,1 +1,3 @@
-console.log('hello, world');
+'use strict';
+
+$(document).ready(init);
