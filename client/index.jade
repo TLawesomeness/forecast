@@ -6,53 +6,70 @@ html(lang='en')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css')
     link(rel='stylesheet', href='/style.css')
   body
-    h1 Forecasting App
-    //- input#zipcode(type='text', autofocus=true, placeholder='zipcode')
-    //- button#get-zipcode   
-    
-    .container
-      .row#citytext Fremont
-      .row#currdate Thu, February 12
-      .row#currtemp 51 F
+    container
+      #head
+        row
+          h1 Forecasting App
+          input.zip(type='text', autofocus = true, placeholder = 'Enter Zipcode')
+          button#get-zip Get Zipcode
       
-      .row#feels
-        .col-xs-3#realfeel Real Feel 56 deg
-        .col-xs-3#probofrain  Probability of Rain 4%
-        .col-xs-3#uv UV Low
-        .col-xs-3#sunsettime Sunset 5:44pm      
-        
+    
+    //- container#body
+    //-   #bodyImg
+    //-     #currName
+    //-     #currDate
+    //-     #currTemp    
+    //-       
+    //- 
+    .mainbody
+      .row#currcity 
+      .row#currstate 
+      .row#currtemp
+      .row#currclimate 
+      //- .row#feels
+      //-   .col-xs-3#realfeel Real Feel 56 deg
+      //-   .col-xs-3#probofrain  Probability of Rain 4%
+      //-   .col-xs-3#uv UV Low
+      //-   .col-xs-3#sunsettime Sunset 5:44pm      
+
       .row#forecasts        
         .row.days
           .col-md-2 
-            .row.info#day1.day thurs
-            .row.info#d1icon.iconimg sunny
-            .row.info#high1.high 71
-            .low.info#low1.low  47    
+            .row.info#day1.day
+            .row.info#d1date.date   
+            .row.info#d1icon.iconimg 
+            .row.info#high1.high 
+            .low.info#low1.low     
           .col-md-2
-            .row.info#day1.day thurs
-            .row.info#d1icon.iconimg sunny
-            .row.info#high1.high 71
-            .low.info#low1.low  47
+            .row.info#day2.day
+            .row.info#d2date.date  
+            .row.info#d2icon.iconimg 
+            .row.info#high2.high 
+            .low.info#low2.low  
           .col-md-2
-            .row.info#day1.day thurs
-            .row.info#d1icon.iconimg sunny
-            .row.info#high1.high 71
-            .low.info#low1.low  47
+            .row.info#day3.day
+            .row.info#d3date.date     
+            .row.info#d3icon.iconimg 
+            .row.info#high3.high 
+            .low.info#low3.low 
           .col-md-2
-            .row.info#day1.day thurs
-            .row.info#d1icon.iconimg sunny
-            .row.info#high1.high 71
-            .low.info#low1.low  47
+            .row.info#day4.day
+            .row.info#d4date.date   
+            .row.info#d4icon.iconimg 
+            .row.info#high4.high 
+            .low.info#low4.low 
           .col-md-2
-            .row.info#day1.day thurs
-            .row.info#d1icon.iconimg sunny
-            .row.info#high1.high 71
-            .low.info#low1.low  47
+            .row.info#day5.day 
+            .row.info#d5date.date  
+            .row.info#d5icon.iconimg 
+            .row.info#high5.high 
+            .low.info#low5.low  
           .col-md-2
-            .row.info#day1.day thurs
-            .row.info#d1icon.iconimg sunny
-            .row.info#high1.high 71
-            .low.info#low1.low  47    
+            .row.info#day6.day
+            .row.info#d6date.date  
+            .row.info#d6icon.iconimg 
+            .row.info#high6.high 
+            .low.info#low6.low     
           
     script(src='/vendor/jquery/dist/jquery.js')
     script(src='/main.js')
