@@ -8,8 +8,9 @@ function init() {
 }
 
 function getZip() {
-  $('#get-zip').val();
-  console.log($(this).val());
+  var zipcode = $('.zip').val();
+  getLocationByZip(zipcode);
+  console.log(zipcode);
 }
 
 function getLocal() {
@@ -37,6 +38,22 @@ function success(pos) {
     displayForecast();
   });
 }
+
+function getLocationByZip(zip) {
+  var forecast = 'http://api.wunderground.com/api/e644b8e592dd1261/forecast10day/q/zip' + zip + '.json';
+  var cond = 'http://api.wunderground.com/api/e644b8e592dd1261/conditions/q/zip' + zip + '.json';
+
+  $.getJSON(cond, function(response) {
+    weather.current = response;
+    displayForecast();
+  });
+
+  $.getJSON(forecast, function(response) {
+    weather.forecast = response;
+    displayForecast();
+  });
+}
+
 
 function error(err) {
   console.log('Could not compute.', err);
