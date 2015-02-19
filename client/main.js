@@ -1,57 +1,41 @@
 'use strict';
 
 $(document).ready(init);
-
+console.log(Weather);
+var weatherApi;
 function init() {
+  weatherApi = Weather();
   getLocation();
   $('#get-zip').click(getZip);
 }
 
 function getZip() {
   var zipcode = $('.zip').val();
-  getLocationByZip(zipcode);
-  console.log(zipcode);
+  getWeatherAndDisplay({zipCode: zipcode});
 }
 
-function getLocal() {
-  var getLocation = getLocation;
-}
 
 function getLocation() {
   var getLocal = {enableHighAccuracy: true, timeout: 5000, maximumAge: 0};
-  navigator.geolocation.getCurrentPosition(success, error, getLocal);
+  navigator.geolocation.getCurrentPosition(getWeatherAndDisplay, error, getLocal);
 }
 
 var weather = {};
 
-function success(pos) {
-  var forecast = 'http://api.wunderground.com/api/e644b8e592dd1261/forecast10day/q/' + pos.coords.latitude + ',' + pos.coords.longitude + '.json';
-  var cond = 'http://api.wunderground.com/api/e644b8e592dd1261/conditions/q/' + pos.coords.latitude + ',' + pos.coords.longitude + '.json';
 
-  $.getJSON(cond, function(response) {
-    weather.current = response;
+function getWeatherAndDisplay(query) {
+  var successCallback = function(response){
+  console.log(response);
+    if(response.response.error){
+      alert(response.response.error.description);
+      return ;
+    }
+    weather[this.field] = response;
     displayForecast();
-  });
+  };
+  weatherApi.requestConditions(query, successCallback.bind({field: 'current'}));
 
-  $.getJSON(forecast, function(response) {
-    weather.forecast = response;
-    displayForecast();
-  });
-}
-
-function getLocationByZip(zip) {
-  var forecast = 'http://api.wunderground.com/api/e644b8e592dd1261/forecast10day/q/zip' + zip + '.json';
-  var cond = 'http://api.wunderground.com/api/e644b8e592dd1261/conditions/q/zip' + zip + '.json';
-
-  $.getJSON(cond, function(response) {
-    weather.current = response;
-    displayForecast();
-  });
-
-  $.getJSON(forecast, function(response) {
-    weather.forecast = response;
-    displayForecast();
-  });
+  weatherApi.requestForecast(query, successCallback.bind({field: 'forecast'}));
 }
 
 
