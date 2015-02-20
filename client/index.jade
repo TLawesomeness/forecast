@@ -8,55 +8,59 @@ html(lang='en')
   body
     container
       #head
-        row
-          h1 Forecasting App
+          h1 Weather App
           input.zip(type='text', autofocus = true, placeholder = 'Enter Zipcode')
           button#get-zip Get Zipcode
-      
-    .mainbody
-      .row#currcity 
-      .row#currstate 
-      .row#currtemp
-      .row#currclimate 
-      
-      .row#forecasts        
-        .row.days
-          .col-md-2 
-            .row.info#day1.day
-            .row.info#d1date.date   
-            .row.info#d1icon.iconimg 
-            .row.info#high1.high 
-            .low.info#low1.low     
-          .col-md-2
-            .row.info#day2.day
-            .row.info#d2date.date  
-            .row.info#d2icon.iconimg 
-            .row.info#high2.high 
-            .low.info#low2.low  
-          .col-md-2
-            .row.info#day3.day
-            .row.info#d3date.date     
-            .row.info#d3icon.iconimg 
-            .row.info#high3.high 
-            .low.info#low3.low 
-          .col-md-2
-            .row.info#day4.day
-            .row.info#d4date.date   
-            .row.info#d4icon.iconimg 
-            .row.info#high4.high 
-            .low.info#low4.low 
-          .col-md-2
-            .row.info#day5.day 
-            .row.info#d5date.date  
-            .row.info#d5icon.iconimg 
-            .row.info#high5.high 
-            .low.info#low5.low  
-          .col-md-2
-            .row.info#day6.day
-            .row.info#d6date.date  
-            .row.info#d6icon.iconimg 
-            .row.info#high6.high 
-            .low.info#low6.low     
+    container
+      .mainbody
+        .row#currcity 
+        .row#currstate 
+        .row#currtemp
+        .row#currclimate
+        
+        .row#forecasts        
+          .row.days
+            .col-md-2 
+              .row.info#day1.day
+              .row.info#d1date.date   
+              .row.info#d1icon.iconimg 
+              .row.info#high1.high 
+              .low.info#low1.low     
+            .col-md-2
+              .row.info#day2.day
+              .row.info#d2date.date  
+              .row.info#d2icon.iconimg 
+              .row.info#high2.high 
+              .low.info#low2.low  
+            .col-md-2
+              .row.info#day3.day
+              .row.info#d3date.date     
+              .row.info#d3icon.iconimg 
+              .row.info#high3.high 
+              .low.info#low3.low 
+            .col-md-2
+              .row.info#day4.day
+              .row.info#d4date.date   
+              .row.info#d4icon.iconimg 
+              .row.info#high4.high 
+              .low.info#low4.low 
+            .col-md-2
+              .row.info#day5.day 
+              .row.info#d5date.date  
+              .row.info#d5icon.iconimg 
+              .row.info#high5.high 
+              .low.info#low5.low  
+            .col-md-2
+              .row.info#day6.day
+              .row.info#d6date.date  
+              .row.info#d6icon.iconimg 
+              .row.info#high6.high 
+              .low.info#low6.low     
+              
+          .row#showYesterday
+          .row#yesterdayTemp
           
+            
     script(src='/vendor/jquery/dist/jquery.js')
+    script(src='/weather.js')
     script(src='/main.js')
