@@ -2,13 +2,13 @@
 
 var Weather = function() {
 
-  var base_url= 'http://api.wunderground.com/api/e644b8e592dd1261/';
+  var base_url = 'http://api.wunderground.com/api/e644b8e592dd1261/';
   var forecastEndpoint = 'forecast10day' ;
   var conditionsEndpoint = 'conditions';
   var yesterdayEndpoint = 'yesterday';
 
   var request = function(query, endpoint , callback) {
-    var q ;
+    var q;
     if (query.coords) {
       q = '/q/' + query.coords.latitude + ',' + query.coords.longitude + '.json';
     }
@@ -19,7 +19,7 @@ var Weather = function() {
       console.log('in error callback', err);
     };
 
-    $.ajax( {
+    $.ajax({
        method: 'GET',
        url: base_url + endpoint + q,
        success: callback,

@@ -43,7 +43,7 @@ function error(err) {
 function displayForecast() {
   if (Object.keys(weather).length === 3) {
     $('#currcity').text(weather.current.current_observation.display_location.city + ', ' + weather.current.current_observation.display_location.state);
-    $('#currstate').text(weather.forecast.forecast.simpleforecast.forecastday[0].date.weekday_short + ', ' + weather.forecast.forecast.simpleforecast.forecastday[0].date.day + ' ' + weather.forecast.forecast.simpleforecast.forecastday[0].date.monthname);
+    $('#currdate').text(weather.forecast.forecast.simpleforecast.forecastday[0].date.weekday_short + ', ' + weather.forecast.forecast.simpleforecast.forecastday[0].date.day + ' ' + weather.forecast.forecast.simpleforecast.forecastday[0].date.monthname);
     $('#currtemp').html(weather.current.current_observation.temp_f + '&deg;' + ' F');
     $('#currclimate').html('<img src ="' + weather.current.current_observation.icon_url + '">');
 
