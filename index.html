@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <container>
+      <div id="head">
+        <h1>Weather App</h1>
+        <input type="text" autofocus placeholder="Enter Zipcode" class="zip">
+        <button id="get-zip">Get Zipcode</button>
+      </div>
+    </container>
+    <container>
+      <div class="mainbody">
+        <div id="currcity" class="row"> </div>
+        <div id="currdate" class="row"> </div>
+        <div id="currtemp" class="row"></div>
+        <div id="currclimate" class="row"></div>
+        <div id="forecasts" class="row">       
+          <div class="row days">
+            <div class="col-md-2"> 
+              <div id="day1" class="row info day"></div>
+              <div id="d1date" class="row info date">  </div>
+              <div id="d1icon" class="row info iconimg"> </div>
+              <div id="high1" class="row info high"> </div>
+              <div id="low1" class="low info low">    </div>
+            </div>
+            <div class="col-md-2">
+              <div id="day2" class="row info day"></div>
+              <div id="d2date" class="row info date"> </div>
+              <div id="d2icon" class="row info iconimg"> </div>
+              <div id="high2" class="row info high"> </div>
+              <div id="low2" class="low info low"> </div>
+            </div>
+            <div class="col-md-2">
+              <div id="day3" class="row info day"></div>
+              <div id="d3date" class="row info date">    </div>
+              <div id="d3icon" class="row info iconimg"> </div>
+              <div id="high3" class="row info high"> </div>
+              <div id="low3" class="low info low"> </div>
+            </div>
+            <div class="col-md-2">
+              <div id="day4" class="row info day"></div>
+              <div id="d4date" class="row info date">  </div>
+              <div id="d4icon" class="row info iconimg"> </div>
+              <div id="high4" class="row info high"> </div>
+              <div id="low4" class="low info low"> </div>
+            </div>
+            <div class="col-md-2">
+              <div id="day5" class="row info day"> </div>
+              <div id="d5date" class="row info date"> </div>
+              <div id="d5icon" class="row info iconimg"> </div>
+              <div id="high5" class="row info high"> </div>
+              <div id="low5" class="low info low"> </div>
+            </div>
+            <div class="col-md-2">
+              <div id="day6" class="row info day"></div>
+              <div id="d6date" class="row info date"> </div>
+              <div id="d6icon" class="row info iconimg"> </div>
+              <div id="high6" class="row info high"> </div>
+              <div id="low6" class="low info low">    </div>
+            </div>
+          </div>
+        </div>
+        <div id="showYesterday" class="text-center"></div>
+        <div id="yesterdayTemp" class="text-center"></div>
+      </div>
+    </container>
+    <script src="/vendor/jquery/dist/jquery.js"></script>
+    <script src="/weather.js"></script>
+    <script src="/main.js"></script>
+  </body>
+</html>

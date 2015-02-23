@@ -1,0 +1,72 @@
+#head {
+  height: 100px;
+  width: 300px;
+  margin: 0 auto;
+  font-family: verdana;
+}
+#get-zip {
+  color: red;
+}
+h1 {
+  color: red;
+}
+.mainbody {
+  width: 400px;
+  background-image: linear-gradient(to top left, blue, orange);
+  opacity: .7;
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  box-shadow: 0 0 20px black;
+  margin: 0 auto;
+}
+#currcity {
+  width: 400px;
+  padding-top: 25px;
+  padding-left: 10px;
+  font-size: 2.5em;
+  text-align: center;
+}
+#currdate {
+  width: 400px;
+  padding-top: 10px;
+  padding-left: 10px;
+  font-size: 1.5em;
+  text-align: center;
+}
+#currtemp {
+  width: 400px;
+  padding: 10px 0 0 5px;
+  font-size: 4.5em;
+  text-align: center;
+}
+#currclimate {
+  width: 400px;
+  padding: 15px 0 0 5px;
+  font-size: 2em;
+  text-align: center;
+}
+#showYesterday {
+  width: 400px;
+  font-size: 1em;
+}
+#yesterdayTemp {
+  width: 400px;
+  font-size: 1em;
+}
+.info.day {
+  font-size: 20px;
+  font-weight: bold;
+}
+.days {
+  width: 400px;
+  padding: 10px 0 15px 20px;
+  font-size: 1.5em;
+  margin: 0 auto;
+  border-bottom: 1px solid #efa99b;
+}
+.info {
+  padding-top: 12px;
+  padding-right: 10px;
+  text-align: center;
+}
