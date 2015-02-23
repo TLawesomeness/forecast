@@ -84,6 +84,6 @@ function displayForecast() {
     $('#low6').html(weather.forecast.forecast.simpleforecast.forecastday[6].low.fahrenheit + '&deg;');
 
     $('#showYesterday').text('Yesterday: ' + weather.yesterday.history.date.pretty);
-    $('#yesterdayTemp').html((weather.yesterday.history.dailysummary[0].maxtempi + '&deg;' + 'High') + ' ' + (weather.yesterday.history.dailysummary[0].mintempi + '&deg;' + 'Low'));
+    $('#yesterdayTemp').html((weather.yesterday.history.dailysummary[0].maxtempi + '&deg; ' + 'High') + ' ' + (weather.yesterday.history.dailysummary[0].mintempi + '&deg; ' + 'Low'));
   }
 }
